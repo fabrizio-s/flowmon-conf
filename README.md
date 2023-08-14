@@ -12,3 +12,8 @@ To start these containers, install the latest versions of docker and docker comp
 After the containers are up and running, you can access the Kibana dashboard here:
 
     http://<IP of host where containers are running>:5601
+
+From the Kibana dashboard, you can login with the credentials:
+
+    username: elastic
+    password: <the value you set for the ELASTIC_PASSWORD variable in the .env file>

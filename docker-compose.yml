@@ -110,7 +110,7 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
-    image: elastiflow/flow-collector:6.3.0
+    image: elastiflow/flow-collector:6.3.2
     container_name: flowmon-collector
     restart: 'unless-stopped'
     network_mode: 'host'

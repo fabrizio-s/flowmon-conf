@@ -1,3 +1,5 @@
+(Configurations tested working with docker 26.0.1 and docker-compose version 2.26.1)
+
 docker-compose.yml that will set up Elastiflow, Elasticsearch and Kibana for monitoring network traffic. Netflow must be configured from the router to send data to Elastiflow AFTER all three containers are up and running. Make sure all firewall rules are configured so as to allow this traffic. If you want to check whether Elastiflow is correctly receiving data from the router, change the following environment variables in flow-collector.env (https://docs.elastiflow.com/docs/config_ref/common/output_monitor#ef_output_monitor_enable):
     
     EF_OUTPUT_MONITOR_ENABLE: 'true'
@@ -17,3 +19,8 @@ From the Kibana dashboard, you can login with the credentials:
 
     username: elastic
     password: <the value you set for the ELASTIC_PASSWORD variable in the .env file>
+
+The elastiflow ndjson can be downloaded from here https://docs.elastiflow.com/docs/data_platforms/elastic/kibana/. Instructions to import the ndjson from kibana are available in this video (timestamp 6:17): https://youtu.be/OB7tWPthBI0?t=377
+
+The same ndjson kibana-8.2.x-flow-codex.ndjson that can be downloaded from elastiflow's website linked above is provided in this repo just for convenience.
+
